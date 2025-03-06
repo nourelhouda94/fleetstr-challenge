@@ -1,0 +1,73 @@
+/* Custom Select Wrapper */
+.custom-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+/* Custom Select Dropdown */
+.filter-dropdown {
+  width: 100%;
+  padding: 8px 40px;
+  border: 2px solid #dddddf;
+  border-radius: 2px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f6f7f9;
+  text-align: left;
+  appearance: none;
+  /* Hide default browser arrow */
+}
+
+/* Custom Icons (Location & Time) */
+.custom-icon {
+  position: absolute;
+  left: 10px;
+  color: #424242;
+  font-size: 16px;
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+/* Dropdown Arrow */
+.custom-arrow {
+  position: absolute;
+  right: 10px;
+  color: #424242;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Adjust text alignment */
+.filter-dropdown {
+  padding-left: 35px;
+}
+
+/* Hover Effect */
+.filter-dropdown:hover {
+  border-color: #1d88bb;
+}
+
+.filter-dropdown:focus {
+  border-color: #1d88bb;
+  font-weight: 600;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 91, 187, 0.5);
+}
+
+/* Date Inputs */
+.date-input {
+  padding: 8px 10px;
+  border: 2px solid #424242;
+  border-radius: 2px;
+  font-size: 16px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.date-input:focus {
+  border-color: #1d88bb;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 91, 187, 0.5);
+}
