@@ -65,7 +65,7 @@ const App = () => {
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md w-full">
-      <div className="flex justify-between">
+      <div className="flex flex-wrap gap-2 md:flex-nowrap justify-between">
         <div>
           <h4>Tesla Roadster 2.5</h4>
           <h1 className="text-2xl font-bold mb-4">Vehicle Cost Comparison</h1>

@@ -105,9 +105,9 @@ export default function Filters({
   };
 
   return (
-    <div className="filters-container flex gap-4 relative">
+    <div className="filters-container xl:flex xl:gap-4 xl:relative md:block items-end justify-end">
       {/* Location Filter */}
-      <div className="custom-select">
+      <div className="custom-select w-60">
         <FaMapMarkerAlt className="custom-icon location-icon" />
         <select className="filter-dropdown" value={selectedLocation} onChange={handleLocationChange}>
           {locationOptions.map((location) => (
@@ -120,7 +120,7 @@ export default function Filters({
       </div>
 
       {/* Time Range Filter */}
-      <div className="custom-select">
+      <div className="custom-select w-60">
         <FaCalendarAlt className="custom-icon calendar-icon" />
         <select
           className="filter-dropdown"
@@ -138,7 +138,7 @@ export default function Filters({
 
       {/* Date Range Picker Button (Only Shown for Custom Selection) */}
       {selectedTime === "Custom" && (
-        <div className="relative">
+        <div className="relative ">
           <button
             onClick={() => setShowCalendar(!showCalendar)}
             className="date-input"
@@ -148,7 +148,7 @@ export default function Filters({
 
           {/* Date Range Picker (Visible When Clicked) */}
           {showCalendar && (
-            <div className="absolute top-full right-0 z-50 bg-white shadow-lg border rounded-xs mt-2">
+            <div className="xl:absolute sm:fixed top-full right-0 z-50 bg-white shadow-lg border rounded-xs mt-2">
               <DateRange
                 ranges={dateRange}
                 onChange={handleDateChange}
