@@ -105,13 +105,13 @@ export default function Filters({
   };
 
   return (
-    <div className="filters-container xl:flex xl:gap-4 xl:relative md:block items-end justify-end">
+    <div className="flex justify-end items-start gap-4 flex-wrap">
       {/* Location Filter */}
-      <div className="custom-select w-60">
+      <div className="custom-select min-w-48">
         <FaMapMarkerAlt className="custom-icon location-icon" />
         <select className="filter-dropdown" value={selectedLocation} onChange={handleLocationChange}>
           {locationOptions.map((location) => (
-            <option key={location} value={location}>
+            <option key={location} value={location} className="text-[14px]">
               {location}
             </option>
           ))}
@@ -120,7 +120,7 @@ export default function Filters({
       </div>
 
       {/* Time Range Filter */}
-      <div className="custom-select w-60">
+      <div className="custom-select min-w-48">
         <FaCalendarAlt className="custom-icon calendar-icon" />
         <select
           className="filter-dropdown"
@@ -128,7 +128,7 @@ export default function Filters({
           onChange={(e) => handlePresetSelection(e.target.value)}
         >
           {timeOptions.map((time) => (
-            <option key={time} value={time}>
+            <option key={time} value={time} className="text-[14px]">
               {time}
             </option>
           ))}
@@ -138,17 +138,17 @@ export default function Filters({
 
       {/* Date Range Picker Button (Only Shown for Custom Selection) */}
       {selectedTime === "Custom" && (
-        <div className="relative ">
+        <div className="relative">
           <button
             onClick={() => setShowCalendar(!showCalendar)}
-            className="date-input"
+            className="date-input min-w-48 mb-2"
           >
             {format(dateRange[0].startDate, "dd/MM/yyyy")} - {format(dateRange[0].endDate, "dd/MM/yyyy")}
           </button>
 
           {/* Date Range Picker (Visible When Clicked) */}
           {showCalendar && (
-            <div className="xl:absolute sm:fixed top-full right-0 z-50 bg-white shadow-lg border rounded-xs mt-2">
+            <div className="xl:absolute xl:top-full xl:right-0 z-50 bg-white shadow-lg border border-gray-400 rounded-xs lg:m-0 mt-2 max-w-fit">
               <DateRange
                 ranges={dateRange}
                 onChange={handleDateChange}

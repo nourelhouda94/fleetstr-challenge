@@ -65,18 +65,21 @@ const App = () => {
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md w-full">
-      <div className="flex flex-wrap gap-2 md:flex-nowrap justify-between">
-        <div>
+      <div className="md:flex items-start  mb-6">
+        <div className="md:min-w-1/2 sm:min-w-full mb-6">
           <h4>Tesla Roadster 2.5</h4>
-          <h1 className="text-2xl font-bold mb-4">Vehicle Cost Comparison</h1>
+          <h1 className="text-2xl font-bold">Vehicle Cost Comparison</h1>
         </div>
-        <div>
+        <div className="md:min-w-1/2 w-full md:flex justify-end flex-wrap">
           <Filters onFilterChange={fetchData} />
         </div>
       </div>
 
       {/* Cost Comparison Chart */}
-      <CostChart data={data} />
+      <div className="w-full">
+        <CostChart data={data}/>
+      </div>
+      
     </div>
   );
 };
